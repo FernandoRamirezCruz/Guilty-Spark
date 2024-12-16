@@ -31,8 +31,6 @@ std::vector<Slave> slaves;
 //////////////////////////////ESTRUCTURA DE NODOS PARA SIMON DICE//////////////
 // Definición de la estructura del nodo
 struct Node {
-
-
   int slave;           // Identificador del esclavo
   String color;        // Color asociado al esclavo
   Node* next;          // Puntero al siguiente nodo
@@ -143,6 +141,7 @@ void loop() {
 
   aceptarNuevosEsclavos();
   gestionarEsclavos();
+
   if(star){
 
 
@@ -211,6 +210,7 @@ void INICIO(){
   star=true;
   enviarComando("Slave1", "OFF");
 }
+
 void GANAR(){
   enviarComando("Slave1", "WIN");
   enviarComando("Slave2", "WIN");
